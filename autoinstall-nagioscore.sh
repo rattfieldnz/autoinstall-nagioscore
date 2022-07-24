@@ -97,7 +97,7 @@ function create_directory {
 function download_file {
     # PARAMETER 01 ... filename
     # PARAMETER 02 ... download url
-    execute "downloading file $1" "$1 downloaded successfully" "$1 could not be downloaded" 0 "wget -O $1 $2 $IPTYPE" "[ -f \"$1\" ]"
+    execute "downloading file $1" "$1 downloaded successfully" "$1 could not be downloaded" 0 "wget -O $1 $2 --inet4-only" "[ -f \"$1\" ]"
 }
 
 function extract_file {
